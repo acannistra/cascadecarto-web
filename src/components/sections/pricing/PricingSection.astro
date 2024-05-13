@@ -35,6 +35,7 @@ interface PricingSectionProps {
 
 <section
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  id="pricing"
 >
   <!-- Section heading and sub-heading -->
   <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
@@ -112,14 +113,25 @@ interface PricingSectionProps {
 
       <div class="mb-4">
         <span class="text-6xl font-bold text-neutral-200"
-          >{pricing.professionalToolbox.price}</span
+          >{pricing.professionalToolbox.ot_price}</span
         >
         <span class="text-lg font-bold text-orange-100"
-          >{pricing.professionalToolbox.cents}</span
+          >{pricing.professionalToolbox.ot_cents}</span
         >
         <span class="ms-3 text-orange-200"
-          >{pricing.professionalToolbox.billingFrequency}</span
+          >{pricing.professionalToolbox.ot_billingFrequency}</span
         >
+        <span class="text-4xl font-bold text-neutral-200"
+        >+ {pricing.professionalToolbox.hr_price}</span
+        >
+        <span class="text-lg font-bold text-orange-100"
+          >{pricing.professionalToolbox.hr_cents}</span
+        >
+        <span class="ms-3 text-orange-200"
+          >{pricing.professionalToolbox.hr_billingFrequency}</span
+        >
+
+        
       </div>
       <!-- Features list - automatically created by mapping over `features` array -->
       <ul class="mb-6 space-y-2 text-orange-100">

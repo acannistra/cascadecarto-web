@@ -21,7 +21,7 @@ interface Props {
 This is the main structure for the page.
 We set the language of the page to English and add classes for scrollbar and scroll behavior.
 -->
-<html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
+<html lang={lang} class="scroll-pt-16">
   <head>
     <!-- Adding metadata to the HTML document -->
     <Meta meta={meta} structuredData={structuredData} />
@@ -39,21 +39,9 @@ We set the language of the page to English and add classes for scrollbar and scr
         document.documentElement.classList.remove("dark");
       }
     </script>
-    <script is:inline src="/scripts/vendor/lenis/lenis.js"></script>
-    <script is:inline>
-      // Script to handle Lenis library settings for smooth scrolling
-      const lenis = new Lenis();
-
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    </script>
   </head>
   <body
-    class="bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800"
+    class="bg-ecru-800 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800"
   >
     <!--
     Setting up the main structure of the page.
@@ -66,37 +54,6 @@ We set the language of the page to English and add classes for scrollbar and scr
       </main>
     </div>
     <FooterSection />
-    <style>
-      /* CSS rules for the page scrollbar and scrolling experience with lenis library */
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-      }
 
-      .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-
-      html.lenis,
-      html.lenis body {
-        height: auto;
-      }
-
-      .lenis.lenis-smooth {
-        scroll-behavior: auto !important;
-      }
-
-      .lenis.lenis-smooth [data-lenis-prevent] {
-        overscroll-behavior: contain;
-      }
-
-      .lenis.lenis-stopped {
-        overflow: hidden;
-      }
-
-      .lenis.lenis-scrolling iframe {
-        pointer-events: none;
-      }
-    </style>
   </body>
 </html>

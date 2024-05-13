@@ -5,13 +5,16 @@ import NavLink from "@components/ui/links/NavLink.astro";
 import Authentication from "./Authentication.astro";
 import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
-import BrandLogo from "@components/BrandLogo.astro";
-import LanguagePicker from "@components/ui/LanguagePicker.astro";
+import logo from "@images/cc_draft_white.webp";
+import {Image} from 'astro:assets';
+
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
 const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 ---
+
+
 
 <!-- Main header component -->
 <header
@@ -19,7 +22,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 >
   <!-- Navigation container -->
   <nav
-    class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
+    class="relative mx-2 w-full rounded-[36px] border border-olive-500 bg-olive-400 px-4 py-3 backdrop-blur-md dark:border-neutral-700/40 dark:olive-700 dark:backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
@@ -29,13 +32,14 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         href={homeUrl}
         aria-label="Brand"
       >
-        <BrandLogo class="h-auto w-24" />
+      <Image class="h-auto w-48 py-2" src={logo} alt="Mockup of floating boxes" />
+
       </a>
       <!-- Collapse toggle for smaller screens -->
       <div class="ml-auto mr-5 md:hidden">
         <button
           type="button"
-          class="hs-collapse-toggle flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-neutral-600 transition duration-300 hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:outline-none"
+          class="hs-collapse-toggle flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-ivory transition duration-300 hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:outline-none"
           data-hs-collapse="#navbar-collapse-with-animation"
           aria-controls="navbar-collapse-with-animation"
           aria-label="Toggle navigation"
@@ -91,7 +95,6 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         ))}
 
         <Authentication />
-        <LanguagePicker />
         <!-- ThemeIcon component specifically for larger screens -->
         <span class="hidden md:inline-block">
           <ThemeIcon />
