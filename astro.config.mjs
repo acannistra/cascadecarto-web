@@ -15,16 +15,6 @@ export default defineConfig({
   image: {
     domains: ["images.unsplash.com"]
   },
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "fr"],
-    fallback: {
-      fr: "en"
-    },
-    routing: {
-      prefixDefaultLocale: false
-    }
-  },
   prefetch: true,
   integrations: [tailwind(), sitemap({
     i18n: {
@@ -140,6 +130,5 @@ export default defineConfig({
   experimental: {
     clientPrerender: true,
     directRenderScript: true
-  },
-  adapter: vercelStatic()
+  }
 });
