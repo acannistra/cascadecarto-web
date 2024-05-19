@@ -4,7 +4,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
 import { SITE } from "@/data_files/constants";
-import TC from "@/images/head.avif";
+import TC from "@/images/me.avif";
 ---
 
 <!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
@@ -44,7 +44,9 @@ import TC from "@/images/head.avif";
     <section class="mx-auto max-w-5xl px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pt-4">
       <div class="max-w-4xl">
         <!--Blog post contents-->
-        <div class="float-right w-[15rem] lg:w-[28rem] lg:px-10">
+        <div
+          class="mx-auto w-[15rem] py-5 md:float-right lg:w-[28rem] lg:px-10"
+        >
           <Image src={TC} alt="Tony Cannistra" />
           <div
             class="text-center italic text-neutral-700 dark:text-neutral-200"

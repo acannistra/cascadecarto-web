@@ -21,7 +21,7 @@ const product: CollectionEntry<"portfolio">[] = (
 // Define variables for page content
 const title: string = "Portfolio";
 const subTitle: string =
-  "Explore examples of our prior mapping projects. Looking good? Contact us!";
+  'Explore examples of our prior mapping projects, shared with the permission of our clients. Looking good? <a class="text-safety_orange" href="/contact">Contact us!</a>';
 
 // Testimonial data that will be rendered in the component
 const testimonials = [
@@ -92,7 +92,7 @@ const pageTitle: string = `Products | ${SITE.title}`;
         {
           subTitle && (
             <p class="hidden max-w-screen-sm text-pretty text-neutral-600 dark:text-neutral-400 md:block">
-              {subTitle}
+              <Fragment set:html={subTitle} />
             </p>
           )
         }
