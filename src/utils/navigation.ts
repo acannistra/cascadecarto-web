@@ -2,6 +2,8 @@
 const navBarLinks = [
   { name: "Home", url: "/" },
   { name: "Portfolio", url: "/portfolio" },
+  { name: "Pricing", url: "/#pricing" },
+
   { name: "About", url: "/about" },
   { name: "Contact", url: "/contact" },
 ];
@@ -11,6 +13,7 @@ const footerLinks = [
     section: "Pages",
     links: [
       { name: "Portfolio", url: "/portfolio" },
+      { name: "Pricing", url: "/#pricing" },
       { name: "About Us", url: "/about" },
       { name: "Contact", url: "/contact" },
     ],

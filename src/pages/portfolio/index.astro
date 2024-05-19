@@ -99,7 +99,7 @@ const pageTitle: string = `Products | ${SITE.title}`;
           )
         }
       </div>
-      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
+      <PrimaryCTA title="Contact" url="/contact" />
     </div>
     <section>
       {
@@ -109,6 +109,7 @@ const pageTitle: string = `Products | ${SITE.title}`;
               title={p.data.title}
               subTitle={p.data.description}
               benefits={p.data.main.content}
+              tags={p.data.tags}
               imageSrc={p.data.main.imgMain}
             />
           );

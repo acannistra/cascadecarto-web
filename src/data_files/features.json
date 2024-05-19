@@ -1,23 +1,41 @@
-[
-  {
-    "heading": "Topographic Mapping",
-    "content": "Cascade Cartographics can develop a high-resolution topographic map for your project site, with customizable contour intervals, terrain shading, slope angle assessment, and more – all without visiting your site!",
-    "svg": "mdi:mountain-outline"
-  },
-  {
-    "heading": "Parcel Boundary Mapping",
-    "content": "We can produce high-quality GIS maps of parcel boundaries, sourced directly from counties in many states, including Washington and Oregon." ,
-    "svg": "mdi:map-check-outline"
-  },
-  {
-    "heading": "Simplicity and Affordability",
-    "content": "The Cascade Cartographics GIS workflows rely on open-source tools and public data sources, enabling us to reduce our overhead and pass those savings on to you.",
-    "svg": "mdi:dollar"
-  },
-  {
-    "heading": "Flexible Designs",
-    "content": "We start with standard professional GIS map designs and are happy to work with individual clients to accomodate particular desires with regard to map appearance.",
-    "svg": "mdi:palette-outline"
-
-  }
-]
+{
+  "arch": [
+    {
+      "heading": "Topographic Mapping",
+      "content": "Cascade Cartographics can develop a high-resolution topographic map for your project site, with customizable contour intervals, terrain shading, slope angle assessment, and more – all without visiting your site!",
+      "svg": "mdi:mountain-outline"
+    },
+    {
+      "heading": "Parcel Boundary Mapping",
+      "content": "We can produce high-quality GIS maps of parcel boundaries, sourced directly from counties in many states, including Washington and Oregon.",
+      "svg": "mdi:map-check-outline"
+    },
+    {
+      "heading": "Simplicity and Affordability",
+      "content": "The Cascade Cartographics GIS workflows rely on open-source tools and public data sources, enabling us to reduce our overhead and pass those savings on to you.",
+      "svg": "mdi:dollar"
+    },
+    {
+      "heading": "Flexible Designs",
+      "content": "We start with standard professional GIS map designs and are happy to work with individual clients to accomodate particular desires with regard to map appearance.",
+      "svg": "mdi:palette-outline"
+    }
+  ],
+  "rec": [
+    {
+      "heading": "Bring your Own GIS Data, or use Ours",
+      "content": "We source our map data from a variety of sources depending on the scope of the project, including OpenStreetMap, USGS, and local government GIS departments. We can also easily incorporate a client's own GIS data into a mapping project.",
+      "svg": "mdi:database-arrow-right-outline"
+    },
+    {
+      "heading": "Medium- and Large-Scale Mapping",
+      "content": "We can create maps at a variety of scales, from large-scale overview maps to small-scale detailed maps. We can also create maps that span multiple pages, for example for a large property or a trail system.",
+      "svg": "mdi:ruler"
+    },
+    {
+      "heading": "Activity-Specific",
+      "content": "Our experience in recreation maps allows us to create maps tailored to specific activities, such as hiking, biking, or skiing. These maps can include trailheads, trail names, trail difficulty ratings, and more.",
+      "svg": "mdi:ski"
+    }
+  ]
+}
