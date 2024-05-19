@@ -1,0 +1,96 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import { Image } from "astro:assets";
+import TC from "@/images/head.avif";
+---
+
+<!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
+<MainLayout
+  title="About Us"
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://screwfast.uk/about",
+    url: "https://screwfast.uk/about",
+    name: "About Us | Cascade Cartographics",
+    description: "Have questions or want to discuss a project? Reach out!",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://screwfast.uk",
+      name: "Cascade Cartographics",
+      description:
+        "Cascade Cartographics offers top-tier GIS mapping services to meet small and medium-sized project needs.",
+    },
+    inLanguage: "en-US",
+  }}
+>
+  <!--Page content goes here-->
+
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+        >
+          About Cascade Cartographics
+        </h1>
+      </div>
+      <PrimaryCTA title="Contact" url="/contact" noArrow={true} />
+    </div>
+    <section class="mx-auto max-w-5xl px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pt-4">
+      <div class="max-w-4xl">
+        <!--Blog post contents-->
+        <div class="float-right w-[15rem] lg:w-[28rem] lg:px-10">
+          <Image src={TC} alt="Tony Cannistra" />
+          <div
+            class="text-center italic text-neutral-700 dark:text-neutral-200"
+          >
+            Tony Cannistra, Owner
+          </div>
+        </div>
+        <div class="mb-4 space-y-5 dark:text-neutral-200 md:mb-4 md:space-y-4">
+          <p>
+            Cascade Cartographics is an independent GIS and Cartography
+            consulting firm owned and operated by me – Tony Cannistra.
+          </p>
+          <p>
+            For years I've been passionate about a good map – beginning during
+            my college years as an avid outdoor adventurer, learning how to
+            navigate with old USGS topo maps. I learned GIS basics while
+            researching my PhD in Ecology at the University of Washington in
+            Seattle, and went on to work as a Geospatial Software Engineer
+            building maps for outdoor recreation at popular apps like <a
+              href="https://gaiagps.com/map"
+              class="text-safety_orange"
+              target="_blank"
+              rel="noopener noreferrer">Gaia GPS</a
+            >
+            and <a
+              href="https://www.onxmaps.com"
+              class="text-safety_orange"
+              target="_blank"
+              rel="noopener noreferrer">onX Maps</a
+            >.
+          </p>
+          <p>
+            Since then, I've been building maps for a variety of clients – from
+            local guidebook authors to architects. I specialize in creating
+            accurate and beautiful maps at an affordable rate, and I am
+            passionate about working closely with clients to ensure that they
+            can maximize the value of their investment in mapping their project.
+            Check out my <a href="/portfolio" class="text-safety_orange"
+              >portfolio</a
+            > for a glimpse into some of my recent work, and please don't hesitate
+            to <a href="/contact" class="text-safety_orange">reach out</a> if you
+            have any questions or want to discuss a project.
+          </p>
+          <p>I look forward to working with you!</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</MainLayout>

@@ -1,12 +1,12 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "Cascade Cartographics",
+  tagline: "Fast and Accurate GIS and Mapping Design Services",
+  description: "Cascade Cartographics offers GIS and map design services for projects big and small, using modern techniques for high-quality and efficient delivery.", 
+  description_short: "Cascade Cartographics offers top-quality GIS and map design services for small and medium sized projects.",
+  url: "https://cascadecarto.org",
+  author: "Tony Cannistra",
 };
 
 export const SEO = {
@@ -33,7 +33,7 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: : GIS and Map Design Services`,
+  description: "Cascade Cartographics provides accurate and affordable GIS and map design services for small and medium sized projects.",
   image: ogImageSrc,
 };

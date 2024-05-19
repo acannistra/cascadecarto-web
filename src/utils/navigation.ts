@@ -1,30 +1,24 @@
 // An array of links for navigation bar
 const navBarLinks = [
   { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
-  { name: "Blog", url: "/blog" },
+  { name: "Portfolio", url: "/portfolio" },
+  { name: "Pricing", url: "/#pricing" },
+
+  { name: "About", url: "/about" },
   { name: "Contact", url: "/contact" },
 ];
 // An array of links for footer
 const footerLinks = [
   {
-    section: "Ecosystem",
+    section: "Pages",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Portfolio", url: "/portfolio" },
+      { name: "Pricing", url: "/#pricing" },
+      { name: "About Us", url: "/about" },
+      { name: "Contact", url: "/contact" },
     ],
   },
-  {
-    section: "Company",
-    links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
-    ],
-  },
+
 ];
 // An object of links for social icons
 const socialLinks = {

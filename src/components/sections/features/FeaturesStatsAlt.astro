@@ -3,13 +3,15 @@ import { Image } from "astro:assets";
 import product5 from "@images/features-image.avif";
 
 // Define props from Astro
-const { title, subTitle, benefits } = Astro.props;
+const { title, subTitle, benefits, tags, imageSrc } = Astro.props;
 
 // Define TypeScript interface for props
 interface Props {
   title: string;
   subTitle?: string;
   benefits?: Array<string>;
+  tags?: Array<string>;
+  imageSrc: string;
 }
 
 // Define SVG marker to be used in the component
@@ -17,16 +19,27 @@ const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-widt
 ---
 
 <section
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  class="mx-auto max-w-[85rem] px-4 py-5 sm:px-6 lg:px-8 lg:py-7 2xl:max-w-full"
 >
   <!-- Grid -->
   <div class="lg:grid lg:grid-cols-12 lg:items-center lg:gap-16">
     <div class="lg:col-span-7">
-      <Image class="rounded-xl" src={product5} alt="Mockup of floating boxes" />
+      <Image class="rounded-xl" src={imageSrc} alt="Mockup of floating boxes" />
     </div>
     <div class="mt-5 sm:mt-10 lg:col-span-5 lg:mt-0">
       <div class="space-y-6 sm:space-y-8">
         <div class="space-y-2 md:space-y-4">
+          {
+            tags && (
+              <div class="flex flex-wrap space-x-2">
+                {tags.map((tag) => (
+                  <span class="ms-0 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold uppercase text-neutral-50">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )
+          }
           <h2
             class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
           >

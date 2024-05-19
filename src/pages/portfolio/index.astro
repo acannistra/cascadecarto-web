@@ -13,17 +13,17 @@ import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
 // Fetching all the product related content and sorting it by main.id
-const product: CollectionEntry<"products">[] = (
-  await getCollection("products")
+const product: CollectionEntry<"portfolio">[] = (
+  await getCollection("portfolio")
 ).sort(
-  (a: CollectionEntry<"products">, b: CollectionEntry<"products">) =>
+  (a: CollectionEntry<"portfolio">, b: CollectionEntry<"portfolio">) =>
     a.data.main.id - b.data.main.id,
 );
 
 // Define variables for page content
-const title: string = "Products";
+const title: string = "Portfolio";
 const subTitle: string =
-  "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts. Each of our products is crafted with precision and built to last, ensuring you have the right tool for every job.";
+  "Explore examples of our prior mapping projects. Looking good? Contact us!";
 
 // Testimonial data that will be rendered in the component
 const testimonials = [
@@ -67,17 +67,18 @@ const pageTitle: string = `Products | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/products",
-    "url": "https://screwfast.uk/products",
-    "name": "Hardware Tools | ScrewFast",
-    "description": "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts.",
-    "isPartOf": {
+    "@id": "https://cascadecarto.org/portfolio",
+    url: "https://cascadecarto.org/portfolio",
+    name: { pageTitle },
+    description: "Explore examples of our prior mapping projects.",
+    isPartOf: {
       "@type": "WebSite",
-      "url": "https://screwfast.uk",
-      "name": "ScrewFast",
-      "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+      url: "https://cascadecarto.org",
+      name: "Cascade Cartographics",
+      description:
+        "GIS and Mapping services for small and medium-sized projects in the Pacific Northwest.",
     },
-    "inLanguage": "en-US"
+    inLanguage: "en-US",
   }}
 >
   <div
@@ -98,36 +99,23 @@ const pageTitle: string = `Products | ${SITE.title}`;
           )
         }
       </div>
-      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
+      <PrimaryCTA title="Contact" url="/contact" />
     </div>
-    <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
-    <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
-    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+    <section>
       {
-        product.map((product, index) => {
-          const position = index % 4;
-          if (position === 0 || position === 3) {
-            return <CardSmall product={product} />;
-          } else {
-            return <CardWide product={product} />;
-          }
+        product.map((p, index) => {
+          return (
+            <FeaturesStatsAlt
+              title={p.data.title}
+              subTitle={p.data.description}
+              benefits={p.data.main.content}
+              tags={p.data.tags}
+              imageSrc={p.data.main.imgMain}
+            />
+          );
         })
       }
     </section>
   </div>
   <!--Features statistics section-->
-  <FeaturesStatsAlt
-    title="Why Choose ScrewFast?"
-    subTitle="Transform your ideas into tangible results with ScrewFast tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
-    benefits={[
-      "Robust and reliable tools for long-lasting performance.",
-      "Innovative solutions tailored to modern construction needs.",
-      "Customer support dedicated to your project's success.",
-    ]}
-  />
-  <!--Testimonials section-->
-  <TestimonialsSectionAlt
-    title="What Our Customers Say"
-    testimonials={testimonials}
-  />
 </MainLayout>
