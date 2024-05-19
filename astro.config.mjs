@@ -10,7 +10,8 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: "https://acannistra.github.io",
+  base: "cascadecarto-web",
   image: {
     domains: ["images.unsplash.com"]
   },
