@@ -1,0 +1,61 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import { Image } from "astro:assets";
+import TC from "@/images/head.avif";
+---
+
+<!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
+<MainLayout
+  title="About Us"
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://screwfast.uk/about",
+    url: "https://screwfast.uk/about",
+    name: "About Us | Cascade Cartographics",
+    description: "Have questions or want to discuss a project? Reach out!",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://screwfast.uk",
+      name: "Cascade Cartographics",
+      description:
+        "Cascade Cartographics offers top-tier GIS mapping services to meet small and medium-sized project needs.",
+    },
+    inLanguage: "en-US",
+  }}
+>
+  <!--Page content goes here-->
+
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+        >
+          About Cascade Cartographics
+        </h1>
+      </div>
+      <PrimaryCTA title="Contact" url="/contact" noArrow={true} />
+    </div>
+    <section class="mx-auto max-w-5xl px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pt-4">
+      <div class="max-w-2xl">
+        <!--Blog post contents-->
+        <div class="mb-5 space-y-5 md:mb-8 md:space-y-8">
+          <div class="flex flex-wrap">
+            <p class="flex-1">
+              Cascade Cartographics is an independent GIS and Cartography
+              consulting firm owned and operated by me – Tony Cannistra.
+            </p>
+            <div class="flex-1">
+              <Image src={TC} alt="Tony Cannistra" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</MainLayout>

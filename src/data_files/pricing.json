@@ -3,8 +3,8 @@
   "subTitle": "Boost permitting speed and client communication with Cascade Cartographics.",
   "badge": "Most Flexible",
   "thirdOption": "Something else?",
-  "btnText": "Send me an email",
-
+  "btnText": "Contact Me!",
+  "btnLink": "/contact",
   "starterKit": {
     "name": "Basic Site Plan",
     "description": "Best option for smaller, simpler projects",
@@ -17,9 +17,8 @@
       "Roads, Driveways, and Buildings"
     ],
     "purchaseBtnTitle": "Get in Touch",
-    "purchaseLink": "#"
+    "purchaseLink": "/contact"
   },
-
   "professionalToolbox": {
     "name": "Advanced Site Plan",
     "description": "Best for more complex projects",
@@ -36,6 +35,6 @@
       "Custom map design"
     ],
     "purchaseBtnTitle": "Get in Touch",
-    "purchaseLink": "#"
+    "purchaseLink": "/contact"
   }
 }
