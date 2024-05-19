@@ -3,6 +3,7 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
+import { SITE } from "@/data_files/constants";
 import TC from "@/images/head.avif";
 ---
 
@@ -12,16 +13,15 @@ import TC from "@/images/head.avif";
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/about",
-    url: "https://screwfast.uk/about",
+    "@id": SITE.url + "/about",
+    url: SITE.url + "/about",
     name: "About Us | Cascade Cartographics",
     description: "Have questions or want to discuss a project? Reach out!",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://screwfast.uk",
+      url: SITE.url,
       name: "Cascade Cartographics",
-      description:
-        "Cascade Cartographics offers top-tier GIS mapping services to meet small and medium-sized project needs.",
+      description: SITE.description_short,
     },
     inLanguage: "en-US",
   }}
